@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: sergio-webhook-receiver
+  profiles:
+    active: development

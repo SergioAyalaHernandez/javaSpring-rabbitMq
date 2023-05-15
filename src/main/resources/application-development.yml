@@ -1,0 +1,16 @@
+server:
+    port: ${port:8090}
+spring:
+    rabbitmq:
+        addresses: http://localhost:15672/#/
+        username: admin
+        password: admin
+        cache:
+            channel:
+                size: 10
+            connection:
+                mode: CHANNEL
+        max-priority: 10
+        limit-live-queue-seconds: 28800
+        template-metrics-queue-name: webhook.whatsapp.template
+        template-metrics-dead-letter: deadLetter.webhook.whatsapp.template
